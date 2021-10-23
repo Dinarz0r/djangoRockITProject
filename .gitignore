@@ -1,0 +1,12 @@
+.venv
+venv/
+ENV/
+.idea/*
+OpenVenv/
+*.sqlite3
+*.log
+cache/
+__pycache__/
+.env
+# Project exclude paths
+/static/
