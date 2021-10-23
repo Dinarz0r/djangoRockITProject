@@ -7,6 +7,9 @@ User = get_user_model()
 
 
 class Post(models.Model):
+    """
+    Модель публикаций
+    """
     STATUS_INACTIVE = 0
     STATUS_ACTIVE = 1
     STATUS_DRAFT = 2

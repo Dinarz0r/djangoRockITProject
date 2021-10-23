@@ -7,6 +7,11 @@ from rest_framework.viewsets import ViewSet
 
 
 def common_schema_decorator(tags: List[str]):
+    """
+    Декоратор позволяющий вносить и редактировать информацию в схеме SWAGER
+    При использовании необходимо обернуть представление
+    :param tags: аргумент позволяющий в Swager добавить заголовок класса
+    """
     @singledispatch
     def wrapper(origin_class_type):
         return origin_class_type

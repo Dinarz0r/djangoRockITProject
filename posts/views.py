@@ -10,6 +10,9 @@ from posts.serializers import PostSerializer
 
 @common_schema_decorator(tags=['Публикации'])
 class PostViewSet(IsAuthenticated, viewsets.ModelViewSet):
+    """
+    Представление публикаций, с методом для поиска по хэша
+    """
     queryset = Post.objects.select_related('author').all()
     serializer_class = PostSerializer
     filter_backends = (DjangoFilterBackend, filters.SearchFilter)
